@@ -31,11 +31,20 @@ public class Player : MonoBehaviour
             }
         }
     }
-    void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Meteorite"))
         {
             Debug.Log("Player collided with a meteorite!");
+            // GameSystem.IsGameOver = true;
+            // this.gameObject.SetActive(false);
+            Destroy(collision.gameObject);
         }
     }
+
+    // public void Reset()
+    // {
+    //     this.gameObject.transform.position = new Vector3(0, -4, 0);
+    //     this.gameObject.SetActive(true);
+    // }
 }
