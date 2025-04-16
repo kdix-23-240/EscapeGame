@@ -31,4 +31,9 @@ public class GameSystem : MonoBehaviour
             time.text = ((int)timeCount).ToString();
         }
     }
+
+    public void ResetTimeCount()
+    {
+        timeCount = 0f;
+    }
 }

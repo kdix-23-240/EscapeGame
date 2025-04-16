@@ -18,5 +18,6 @@ public class ResetButton : MonoBehaviour
         }
         GameSystem.IsGameOver = false;
         transform.parent.gameObject.SetActive(false);
+        FindObjectOfType<GameSystem>().ResetTimeCount();
     }
 }
