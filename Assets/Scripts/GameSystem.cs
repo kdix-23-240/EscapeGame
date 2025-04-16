@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class GameSystem : MonoBehaviour
 {
+    [SerializeField] private GameObject playerPrefab;
+    [SerializeField] private GameObject ResetButtonPrefab;
     public static bool IsGameOver;
     void Start()
     {
@@ -13,6 +15,7 @@ public class GameSystem : MonoBehaviour
         if (IsGameOver)
         {
             Debug.Log("Game Over!");
+            ResetButtonPrefab.SetActive(true);
         }
     }
 }

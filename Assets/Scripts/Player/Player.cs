@@ -36,15 +36,15 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Meteorite"))
         {
             Debug.Log("Player collided with a meteorite!");
-            // GameSystem.IsGameOver = true;
-            // this.gameObject.SetActive(false);
-            Destroy(collision.gameObject);
+            GameSystem.IsGameOver = true;
+            this.gameObject.SetActive(false);
+            collision.gameObject.SetActive(false);
         }
     }
 
-    // public void Reset()
-    // {
-    //     this.gameObject.transform.position = new Vector3(0, -4, 0);
-    //     this.gameObject.SetActive(true);
-    // }
+    public void Reset()
+    {
+        this.gameObject.transform.position = new Vector3(0, -2, 0);
+        this.gameObject.SetActive(true);
+    }
 }
