@@ -9,10 +9,6 @@ namespace SOLIDScene
         void Start()
         {
             movable = this.gameObject.GetComponent<IMovable>();
-            if (movable == null)
-            {
-                Debug.LogError("IMovable component not found on Player object.");
-            }
         }
 
         void Update()

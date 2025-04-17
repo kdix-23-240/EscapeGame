@@ -20,7 +20,7 @@ namespace SOLIDScene
             }
             GameSystem.IsGameOver = false;
             transform.parent.gameObject.SetActive(false);
-            FindFirstObjectByType<GameSystem>().ResetTimeCount();
+            FindFirstObjectByType<TextManager>().ResetTimeCount();
         }
     }
 }
