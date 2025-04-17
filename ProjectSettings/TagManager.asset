@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Meteorite
+  - Falling
   layers:
   - Default
   - TransparentFX
