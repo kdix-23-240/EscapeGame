@@ -6,8 +6,7 @@ namespace SOLIDScene
     {
         private float posX;
         private float posY;
-        public float speed = 5f; // Speed of the meteorite
-        public float destroyHeight = -10f; // Height at which the meteorite will be destroyed
+        public IMovable moveable;
 
         void Start()
         {
@@ -23,12 +22,7 @@ namespace SOLIDScene
                 return;
             }
 
-            transform.Translate(Vector3.down * speed * Time.deltaTime);
-
-            if (transform.position.y < destroyHeight)
-            {
-                this.gameObject.SetActive(false);
-            }
+            moveable.Move();
         }
 
         public void Reset()

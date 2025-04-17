@@ -4,6 +4,17 @@ namespace SOLIDScene
 {
     public class Player : MonoBehaviour
     {
+        private IMovable movable;
+
+        void Start()
+        {
+            movable = this.gameObject.GetComponent<IMovable>();
+            if (movable == null)
+            {
+                Debug.LogError("IMovable component not found on Player object.");
+            }
+        }
+
         void Update()
         {
             if (GameSystem.IsGameOver)
@@ -11,27 +22,12 @@ namespace SOLIDScene
                 return;
             }
 
-            if (-8 < this.gameObject.transform.position.x)
-            {
-                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-                {
-                    this.gameObject.transform.position += new Vector3(-2, 0, 0);
-                }
-            }
-
-            if (this.gameObject.transform.position.x < 8)
-            {
-                if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-                {
-                    this.gameObject.transform.position += new Vector3(2, 0, 0);
-                }
-            }
+            movable.Move();
         }
         void OnCollisionEnter2D(Collision2D collision)
         {
             if (collision.gameObject.CompareTag("Falling"))
             {
-                // Debug.Log("Player collided with a meteorite!");
                 GameSystem.IsGameOver = true;
                 this.gameObject.SetActive(false);
                 collision.gameObject.SetActive(false);
