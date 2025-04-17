@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1101990710488980264}
   m_Layer: 0
   m_Name: Meteorite
-  m_TagString: Meteorite
+  m_TagString: Falling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

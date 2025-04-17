@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class ResetButton : MonoBehaviour
+namespace NoDesignScene
 {
-    public GameObject playerPrefab;
-    public GameObject meteoritesPrefab;
+    public class ResetButton : MonoBehaviour
+    {
+        public GameObject playerPrefab;
+        public GameObject meteoritesPrefab;
 
-    void Start()
-    {
-        transform.parent.gameObject.SetActive(false);
-    }
-    public void OnClick()
-    {
-        playerPrefab.GetComponent<Player>().Reset();
-        for(int i = 0; i < meteoritesPrefab.transform.childCount; i++)
+        void Start()
         {
-            meteoritesPrefab.transform.GetChild(i).GetComponent<Meteorite>().Reset();
+            transform.parent.gameObject.SetActive(false);
         }
-        GameSystem.IsGameOver = false;
-        transform.parent.gameObject.SetActive(false);
-        FindFirstObjectByType<GameSystem>().ResetTimeCount();
+        public void OnClick()
+        {
+            playerPrefab.GetComponent<Player>().Reset();
+            for (int i = 0; i < meteoritesPrefab.transform.childCount; i++)
+            {
+                meteoritesPrefab.transform.GetChild(i).GetComponent<Meteorite>().Reset();
+            }
+            GameSystem.IsGameOver = false;
+            transform.parent.gameObject.SetActive(false);
+            FindFirstObjectByType<GameSystem>().ResetTimeCount();
+        }
     }
 }

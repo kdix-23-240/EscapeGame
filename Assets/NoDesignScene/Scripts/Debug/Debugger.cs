@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class Debugger : MonoBehaviour
+namespace NoDesignScene
 {
-    void Update()
+    public class Debugger : MonoBehaviour
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        void Update()
         {
-            GameSystem.IsGameOver = !GameSystem.IsGameOver;
-            Debug.Log("Game Over status toggled: " + GameSystem.IsGameOver);
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                GameSystem.IsGameOver = !GameSystem.IsGameOver;
+                Debug.Log("Game Over status toggled: " + GameSystem.IsGameOver);
+            }
         }
     }
 }

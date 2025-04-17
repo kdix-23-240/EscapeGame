@@ -1,39 +1,42 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameSystem : MonoBehaviour
+namespace NoDesignScene
 {
-    public GameObject playerPrefab;
-    public GameObject ResetButtonPrefab;
-    public Text score;
-    public Text time;
-    public static bool IsGameOver;
-    private float timeCount = 0f;
-    void Start()
+    public class GameSystem : MonoBehaviour
     {
-        IsGameOver = false;
-        time.text = "0";
-    }
-
-    void Update()
-    {
-        if (IsGameOver)
+        public GameObject playerPrefab;
+        public GameObject ResetButtonPrefab;
+        public Text score;
+        public Text time;
+        public static bool IsGameOver;
+        private float timeCount = 0f;
+        void Start()
         {
-            Debug.Log("Game Over!");
-            ResetButtonPrefab.SetActive(true);
-            score.text = ((int)timeCount * 100000).ToString();
-            return;
+            IsGameOver = false;
+            time.text = "0";
         }
 
-        if (!IsGameOver)
+        void Update()
         {
-            timeCount += Time.deltaTime;
-            time.text = ((int)timeCount).ToString();
-        }
-    }
+            if (IsGameOver)
+            {
+                // Debug.Log("Game Over!");
+                ResetButtonPrefab.SetActive(true);
+                score.text = ((int)timeCount * 100).ToString();
+                return;
+            }
 
-    public void ResetTimeCount()
-    {
-        timeCount = 0f;
+            if (!IsGameOver)
+            {
+                timeCount += Time.deltaTime;
+                time.text = ((int)timeCount).ToString();
+            }
+        }
+
+        public void ResetTimeCount()
+        {
+            timeCount = 0f;
+        }
     }
 }

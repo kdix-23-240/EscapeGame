@@ -1,37 +1,40 @@
 using UnityEngine;
 
-public class Meteorite : MonoBehaviour
+namespace NoDesignScene
 {
-    private float posX;
-    private float posY;
-    public float speed = 5f; // Speed of the meteorite
-    public float destroyHeight = -10f; // Height at which the meteorite will be destroyed
-
-    void Start()
+    public class Meteorite : MonoBehaviour
     {
+        private float posX;
+        private float posY;
+        public float speed = 5f; // Speed of the meteorite
+        public float destroyHeight = -10f; // Height at which the meteorite will be destroyed
 
-        posX = this.gameObject.transform.position.x;
-        posY = this.gameObject.transform.position.y;
-    }
-
-    void Update()
-    {
-        if (GameSystem.IsGameOver)
+        void Start()
         {
-            return;
+
+            posX = this.gameObject.transform.position.x;
+            posY = this.gameObject.transform.position.y;
         }
 
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
-
-        if (transform.position.y < destroyHeight)
+        void Update()
         {
-            this.gameObject.SetActive(false);
-        }
-    }
+            if (GameSystem.IsGameOver)
+            {
+                return;
+            }
 
-    public void Reset()
-    {
-        this.gameObject.SetActive(true);
-        transform.position = new Vector3(posX, posY, 0);
+            transform.Translate(Vector3.down * speed * Time.deltaTime);
+
+            if (transform.position.y < destroyHeight)
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
+
+        public void Reset()
+        {
+            this.gameObject.SetActive(true);
+            transform.position = new Vector3(posX, posY, 0);
+        }
     }
 }
