@@ -6,13 +6,14 @@ namespace SOLIDScene
     {
         private float posX;
         private float posY;
-        public IMovable moveable;
+        private IMovable moveable;
 
         void Start()
         {
-
             posX = this.gameObject.transform.position.x;
             posY = this.gameObject.transform.position.y;
+
+            moveable = this.gameObject.GetComponent<IMovable>();
         }
 
         void Update()
@@ -22,7 +23,11 @@ namespace SOLIDScene
                 return;
             }
 
+            Debugger.Log("Meteorite Update called");
+
             moveable.Move();
+
+            Debugger.Log("Meteorite Move called");
         }
 
         public void Reset()

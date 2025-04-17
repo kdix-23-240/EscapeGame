@@ -4,13 +4,18 @@ namespace SOLIDScene
 {
     public class Debugger : MonoBehaviour
     {
-        void Update()
+        // void Update()
+        // {
+        //     if (Input.GetKeyDown(KeyCode.Space))
+        //     {
+        //         GameSystem.IsGameOver = !GameSystem.IsGameOver;
+        //         Debug.Log("Game Over status toggled: " + GameSystem.IsGameOver);
+        //     }
+        // }
+
+        public static void Log(string message)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                GameSystem.IsGameOver = !GameSystem.IsGameOver;
-                Debug.Log("Game Over status toggled: " + GameSystem.IsGameOver);
-            }
+            // Debug.Log(message);
         }
     }
 }

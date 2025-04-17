@@ -6,7 +6,7 @@ namespace NoDesignScene
     public class GameSystem : MonoBehaviour
     {
         public GameObject playerPrefab;
-        public GameObject ResetButtonPrefab;
+        public GameObject ResetPopUpPrefab;
         public Text score;
         public Text time;
         public static bool IsGameOver;
@@ -22,7 +22,7 @@ namespace NoDesignScene
             if (IsGameOver)
             {
                 // Debug.Log("Game Over!");
-                ResetButtonPrefab.SetActive(true);
+                ResetPopUpPrefab.SetActive(true);
                 score.text = ((int)timeCount * 100).ToString();
                 return;
             }

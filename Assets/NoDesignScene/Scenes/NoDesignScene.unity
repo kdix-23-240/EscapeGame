@@ -793,7 +793,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 757877708}
-  ResetButtonPrefab: {fileID: 2116965284}
+  ResetPopUpPrefab: {fileID: 2116965284}
   score: {fileID: 1333723432}
   time: {fileID: 614850884}
 --- !u!4 &1406877220
