@@ -1,6 +1,5 @@
 using UnityEngine;
-
-namespace SOLIDScene
+namespace DesignPatternScene
 {
     public interface IMovable
     {
