@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class ResetButton : MonoBehaviour
 {
-    [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private GameObject meteoritesPrefab;
+    public GameObject playerPrefab;
+    public GameObject meteoritesPrefab;
 
     void Start()
     {
@@ -18,6 +18,6 @@ public class ResetButton : MonoBehaviour
         }
         GameSystem.IsGameOver = false;
         transform.parent.gameObject.SetActive(false);
-        FindObjectOfType<GameSystem>().ResetTimeCount();
+        FindFirstObjectByType<GameSystem>().ResetTimeCount();
     }
 }

@@ -3,10 +3,10 @@ using UnityEngine.UI;
 
 public class GameSystem : MonoBehaviour
 {
-    [SerializeField] private GameObject playerPrefab;
-    [SerializeField] private GameObject ResetButtonPrefab;
-    [SerializeField] private Text score;
-    [SerializeField] private Text time;
+    public GameObject playerPrefab;
+    public GameObject ResetButtonPrefab;
+    public Text score;
+    public Text time;
     public static bool IsGameOver;
     private float timeCount = 0f;
     void Start()
