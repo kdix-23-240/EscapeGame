@@ -16,18 +16,15 @@ namespace SOLIDScene
             moveable = this.gameObject.GetComponent<IMovable>();
         }
 
+        /// <summary>
+        /// 1. ゲームオーバーなら即リターン
+        /// 2. IMovableインターフェースのMoveメソッドを呼び出す
+        /// </summary>
         void Update()
         {
-            if (GameSystem.IsGameOver)
-            {
-                return;
-            }
+            // **ここに処理を書く**
 
-            Debugger.Log("Meteorite Update called");
-
-            moveable.Move();
-
-            Debugger.Log("Meteorite Move called");
+            // **ここに処理を書く**
         }
 
         public void Reset()

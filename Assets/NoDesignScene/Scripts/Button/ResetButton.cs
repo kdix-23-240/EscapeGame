@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace NoDesignScene
 {
+    /// <summary>
+    /// リセットボタンのクラス
+    /// 特にやることはないです
+    /// </summary>
     public class ResetButton : MonoBehaviour
     {
         public GameObject playerPrefab;
