@@ -2,6 +2,10 @@ using UnityEngine;
 
 namespace SOLIDScene
 {
+    /// <summary>
+    /// リセットボタンのクラス
+    /// このクラスは特に何もしない
+    /// </summary>
     public class ResetButton : MonoBehaviour
     {
         public GameObject playerPrefab;

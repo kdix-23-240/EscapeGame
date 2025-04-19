@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace NoDesignScene
+namespace AnsNoDesignScene
 {
     public class GameSystem : MonoBehaviour
     {

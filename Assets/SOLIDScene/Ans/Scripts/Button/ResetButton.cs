@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SOLIDScene
+namespace AnsSOLIDScene
 {
     public class ResetButton : MonoBehaviour
     {

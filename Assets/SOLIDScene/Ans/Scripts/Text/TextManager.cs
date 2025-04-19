@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SOLIDScene
+namespace AnsSOLIDScene
 {
     public class TextManager : MonoBehaviour
     {

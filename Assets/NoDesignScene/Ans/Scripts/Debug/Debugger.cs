@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace NoDesignScene
+namespace AnsNoDesignScene
 {
     public class Debugger : MonoBehaviour
     {

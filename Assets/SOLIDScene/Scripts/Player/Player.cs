@@ -11,22 +11,30 @@ namespace SOLIDScene
             movable = this.gameObject.GetComponent<IMovable>();
         }
 
+        /// <summary>
+        /// 1. ゲームオーバーなら即リターン
+        /// 2. IMovableインターフェースのMoveメソッドを呼び出す
+        /// </summary>
         void Update()
         {
-            if (GameSystem.IsGameOver)
-            {
-                return;
-            }
+            // **ここに処理を書く**
 
-            movable.Move();
+            // **ここに処理を書く**
         }
+
+        /// <summary>
+        /// 何かに衝突した時に呼ばれるメソッド
+        /// </summary>
+        /// <param name="collision"></param>
         void OnCollisionEnter2D(Collision2D collision)
         {
+            // Fallingタグのオブジェクトと衝突した時
+            // 1. ゲームオーバーにする
+            // 2. プレイヤーを非表示にする
+            // 3. 衝突した隕石を非表示にする
             if (collision.gameObject.CompareTag("Falling"))
             {
-                GameSystem.IsGameOver = true;
-                this.gameObject.SetActive(false);
-                collision.gameObject.SetActive(false);
+                // **ここに処理を書く**
             }
         }
 

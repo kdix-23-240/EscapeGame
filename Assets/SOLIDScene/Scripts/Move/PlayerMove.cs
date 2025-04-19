@@ -6,20 +6,18 @@ namespace SOLIDScene
     {
         public void Move()
         {
+            // 左にx座標1移動
+            // Aまたは左キーで移動
             if (-8 < this.gameObject.transform.position.x)
             {
-                if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A))
-                {
-                    this.gameObject.transform.position += new Vector3(-2, 0, 0);
-                }
+                // **ここに処理を書く**
             }
 
+            // 右にx座標-1移動
+            // Dまたは右キーで移動
             if (this.gameObject.transform.position.x < 8)
             {
-                if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D))
-                {
-                    this.gameObject.transform.position += new Vector3(2, 0, 0);
-                }
+                // **ここに処理を書く**
             }
         }
     }

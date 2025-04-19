@@ -643,6 +643,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Meteorites
       objectReference: {fileID: 0}
+    - target: {fileID: 6881092525373769717, guid: c538bf39c52d8412ba431c57b9ce918d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881092525373769717, guid: c538bf39c52d8412ba431c57b9ce918d, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9185916688907734831, guid: c538bf39c52d8412ba431c57b9ce918d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.2478911

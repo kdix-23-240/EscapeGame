@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SOLIDScene
+namespace AnsSOLIDScene
 {
     public class PlayerMove : MonoBehaviour, IMovable
     {
